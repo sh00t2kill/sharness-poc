@@ -19,8 +19,8 @@ for a in 1,2
      check a
 ```
 
-```
 as opposed to
+```
 test "the things"
    for a in 1,2
       check a
