@@ -7,4 +7,4 @@ https://github.com/chriscool/sharness
 
 I put together a VERY simple bash script with some loops and logic to show how shells scripting can be used to make tests easier.
 
-Once installed, simply run script.sh from the command line
+Once installed, simply run network.t from the command line
