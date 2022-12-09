@@ -19,9 +19,13 @@ check_match() {
 }
 
 
-#check the things i should be able to hit
+#check it using a function and exit codes. Kept for the sake of showing how it works
 test_expect_success "Check if our DNS Resolver is $DNS_SHOULD_BE" "
     test_expect_code 0 check_match
+"
+
+test_expect_success "Check if our DNS Resolver is $DNS_SHOULD_BE" "
+    [ "$DNS_RESOLVER" = "$DNS_SHOULD_BE" ]
 "
 
 test_done
