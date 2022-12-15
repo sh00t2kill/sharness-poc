@@ -17,9 +17,7 @@ done
 
 #check the things i should NOT be able to hit
 for rip in $REMOTE_NETWORK_FAILURE; do
-  test_expect_failure "Check expected failure connection to $rip" "
-     ping -c 2 $rip
-  "
+  test_expect_success "Check expected failure connection to $rip" "! ping -c 2 $rip"
 done
 
 local_ip=$(ip addr show $(ip route | awk '/default/ { print $5 }') | grep "inet" | head -n 1 | awk '/inet/ {print $2}' | cut -d'/' -f1)
