@@ -10,7 +10,7 @@ EXPECTED_CIDR="192.168.1.0/24"
 
 #check the things i should be able to hit
 for lip in $LOCAL_NETWORK_SUCCESS; do
-  test_expect_success "Check expected successfull connection to $rip" "
+  test_expect_success "Check expected successfull connection to $lip" "
      ping -c 2 $lip
   "
 done
