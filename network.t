@@ -2,7 +2,7 @@
 
 test_description="Show basic features of Sharness"
 
-. ./sharness.sh
+. $SHARNESS_PATH
 
 LOCAL_NETWORK_SUCCESS="192.168.1.1 172.19.87.233"
 REMOTE_NETWORK_FAILURE="1.1.1.1 8.8.8.8"
