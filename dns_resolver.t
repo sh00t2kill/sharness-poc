@@ -2,9 +2,10 @@
 
 test_description="Check DNS resolver"
 
-. ./sharness.sh
+. $SHARNESS_PATH
 
-DNS_RESOLVER=`resolvectl status | grep "Current DNS Server" | cut -d" " -f4`
+#DNS_RESOLVER=`resolvectl status | grep "Current DNS Server" | cut -d" " -f4`
+DNS_RESOLVER=`cat /etc/resolv.conf  | grep nameserver | cut -d" " -f2`
 DNS_SHOULD_BE="1.1.1.1"
 
 
