@@ -2,7 +2,7 @@
 
 test_description="Check DNS resolution against benchmark"
 
-. ./sharness.sh
+. $SHARNESS_PATH
 
 DNS_DOMAINS="www.google.com www.google.com.au www.yahoo.com"
 TRIES=3
